@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>홍길동 — UX/UI 디자이너 포트폴리오</title>
+  <meta name="description" content="사람이 쓰기 편한 화면을 만드는 UX/UI 디자이너 홍길동의 포트폴리오. 모든 프로젝트는 30초 요약부터 시작해요.">
+  <meta property="og:title" content="홍길동 — UX/UI 디자이너 포트폴리오">
+  <meta property="og:description" content="MAKE IT CLEAR. — 문제를 정의하고, 근거로 설계하고, 끝까지 다듬어요.">
+  <meta name="theme-color" content="#0F0F12">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Noto+Sans+KR:wght@400;500;700&family=Space+Mono:wght@400;700&family=Unbounded:wght@700;900&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+
+  <!-- Header -->
+  <header class="site-header on-dark">
+    <div class="wrap site-header__inner">
+      <a class="logo" href="index.html" aria-label="홍길동 홈">GILDONG HONG</a>
+      <button class="menu-btn" type="button" data-menu-btn aria-controls="site-nav" aria-expanded="false" aria-label="메뉴 열기">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="주요 메뉴">
+        <ul>
+          <li><a class="nav-link" href="#work">Work</a></li>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#how">How I built this</a></li>
+          <li><a class="pill pill--lime" href="#contact">연락하기</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero — EXPLORE mode -->
+    <section class="hero on-dark" aria-labelledby="hero-title">
+      <div class="wrap">
+        <p class="mono-label c-lime">UX/UI · Product Designer</p>
+        <h1 class="hero__headline" id="hero-title">
+          <span>MAKE IT</span>
+          <span class="c-lime">CLEAR.</span>
+        </h1>
+        <span class="hero__serif" aria-hidden="true">and a little strange</span>
+        <div class="hero__bottom">
+          <div>
+            <p class="hero__intro">홍길동은 사람이 쓰기 편한 화면을 만드는 UX/UI 디자이너예요. 문제를 정의하고, 근거로 설계하고, 끝까지 다듬어요.</p>
+            <div class="cta-row">
+              <a class="pill pill--blue" href="#work">작업 보기 →</a>
+              <!-- TODO: assets 폴더에 이력서 PDF를 넣고 파일 이름을 맞춰 주세요 -->
+              <a class="pill pill--outline-light" href="assets/resume.pdf">이력서 PDF</a>
+            </div>
+          </div>
+          <a class="scroll-hint" href="#work">SCROLL ↓</a>
+        </div>
+      </div>
+      <div class="badge" aria-hidden="true">OPEN TO<br>WORK</div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>OPEN TO WORK — UX/UI DESIGNER — CASE STUDIES —</span>
+        <span>OPEN TO WORK — UX/UI DESIGNER — CASE STUDIES —</span>
+        <span>OPEN TO WORK — UX/UI DESIGNER — CASE STUDIES —</span>
+        <span>OPEN TO WORK — UX/UI DESIGNER — CASE STUDIES —</span>
+      </div>
+    </div>
+
+    <!-- Selected work -->
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <div class="work-head reveal">
+          <div>
+            <p class="mono-label c-blue">Selected work — 05</p>
+            <h2 class="display-xl" id="work-title">WORK</h2>
+          </div>
+          <p class="work-head__desc">모든 프로젝트는 30초 요약부터 시작해요. 문제, 나의 역할, 결과를 먼저 보고 자세한 과정은 이어서 읽을 수 있어요.</p>
+        </div>
+
+        <ol class="work-list reveal">
+          <li class="work-row">
+            <a class="work-row__link" href="work/hangki.html" data-cursor>
+              <span class="work-row__num" aria-hidden="true">01</span>
+              <h3 class="work-row__title">한끼 · 학식 앱 리디자인</h3>
+              <span class="work-row__field">모바일 앱 · 2026</span>
+              <p class="work-row__summary">메뉴 확인까지 여러 단계 → 인터뷰·테스트로 원인 파악, UX 설계 → 홈에서 바로 오늘 메뉴 확인</p>
+              <span class="work-row__thumb" aria-hidden="true"></span>
+              <span class="work-row__arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li class="work-row">
+            <div class="work-row__link">
+              <span class="work-row__num" aria-hidden="true">02</span>
+              <h3 class="work-row__title">같이타 · 통학 카풀 앱</h3>
+              <span class="work-row__field">모바일 앱 · 2026 · 팀</span>
+              <p class="work-row__summary">같은 방향 통학생 찾기 어려움 → 4인 팀 UX 리드 → 매칭부터 정산까지 프로토타입 완성</p>
+              <span class="work-row__thumb" aria-hidden="true"></span>
+              <span class="soon-tag">준비 중</span>
+            </div>
+          </li>
+          <li class="work-row">
+            <div class="work-row__link">
+              <span class="work-row__num" aria-hidden="true">03</span>
+              <h3 class="work-row__title">학과 홈페이지 리디자인</h3>
+              <span class="work-row__field">반응형 웹 · 2025</span>
+              <p class="work-row__summary">공지·수업 정보 찾기 어려움 → 정보 구조 재설계 → 주요 정보까지 경로 단축</p>
+              <span class="work-row__thumb" aria-hidden="true"></span>
+              <span class="soon-tag">준비 중</span>
+            </div>
+          </li>
+          <li class="work-row">
+            <div class="work-row__link">
+              <span class="work-row__num" aria-hidden="true">04</span>
+              <h3 class="work-row__title">모아 디자인 시스템</h3>
+              <span class="work-row__field">디자인 시스템 · 2026</span>
+              <p class="work-row__summary">프로젝트마다 다른 스타일 → 변수·컴포넌트로 정리 → 다음 프로젝트에서 재사용</p>
+              <span class="work-row__thumb" aria-hidden="true"></span>
+              <span class="soon-tag">준비 중</span>
+            </div>
+          </li>
+          <li class="work-row">
+            <div class="work-row__link">
+              <span class="work-row__num" aria-hidden="true">05</span>
+              <h3 class="work-row__title">포트폴리오 제작기</h3>
+              <span class="work-row__field">AI 활용 · 2026</span>
+              <p class="work-row__summary">2주 안에 포트폴리오 필요 → Claude + Figma MCP로 제작, 판단은 직접 → 공개 URL</p>
+              <span class="work-row__thumb" aria-hidden="true"></span>
+              <span class="soon-tag">준비 중</span>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="wrap about__grid">
+        <div class="reveal">
+          <p class="mono-label c-blue">About</p>
+          <h2 class="serif-xl" id="about-title" lang="en">Hello, I'm<br>Gildong.</h2>
+        </div>
+        <div class="reveal">
+          <p class="about__bio">시각디자인을 공부하며 일상 서비스의 작은 불편에 관심을 갖게 됐어요. 프로젝트마다 사용자 인터뷰로 문제를 확인하고, 프로토타입 테스트로 결정을 검증해요. 최근에는 Claude와 Figma MCP 같은 AI 도구로 기획부터 구현까지 빠르게 실험하는 방식을 익히고 있어요.</p>
+          <dl class="facts">
+            <div class="fact"><dt>잘하는 일</dt><dd>UX 리서치 · UX 설계 · UI 디자인</dd></div>
+            <div class="fact"><dt>쓰는 도구</dt><dd>Figma · Claude · HTML/CSS</dd></div>
+            <div class="fact"><dt>현재</dt><dd>시각디자인과 재학 · 2027년 졸업 예정</dd></div>
+          </dl>
+          <a class="pill pill--outline-dark" href="assets/resume.pdf">이력서 PDF ↓</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- How I built this -->
+    <section class="section how on-dark" id="how" aria-labelledby="how-title">
+      <div class="wrap">
+        <p class="mono-label c-lime">How I built this</p>
+        <div class="how__top reveal">
+          <h2 class="display-l" id="how-title" lang="en">BUILT WITH AI,<br>DECIDED BY ME.</h2>
+          <p class="how__text">이 사이트는 Claude와 Figma MCP로 기획부터 코드까지 만들었어요. AI가 어디까지 했고, 무엇을 직접 판단했는지 과정을 공개해요.</p>
+        </div>
+        <ol class="steps reveal">
+          <li class="step"><span class="step__no">STEP 01</span><p class="step__name">기획안</p><p class="step__tool">Claude</p></li>
+          <li class="step"><span class="step__no">STEP 02</span><p class="step__name">무드보드</p><p class="step__tool">Figma MCP</p></li>
+          <li class="step"><span class="step__no">STEP 03</span><p class="step__name">이미지맵</p><p class="step__tool">Figma MCP</p></li>
+          <li class="step"><span class="step__no">STEP 04</span><p class="step__name">시안</p><p class="step__tool">Claude + Figma</p></li>
+          <li class="step step--todo"><span class="step__no">STEP 05</span><p class="step__name">코드 · 배포</p><p class="step__tool">Claude</p></li>
+        </ol>
+        <span class="pill pill--lime" aria-disabled="true">제작 과정 페이지 준비 중</span>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact on-dark" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact__body">
+        <p class="mono-label c-lime">Contact</p>
+        <h2 class="display-xxl" id="contact-title" lang="en">LET'S TALK.</h2>
+        <p class="contact__lead">함께 만들 일이 있다면 편하게 연락 주세요.</p>
+        <!-- 가상 주소예요. 실제 이메일로 바꿔 주세요 (아래 data-copy 값도 함께) -->
+        <a class="contact__email" href="mailto:gildong.hong@example.com">gildong.hong@example.com</a>
+        <div class="contact__links">
+          <button class="pill pill--lime" type="button" data-copy="gildong.hong@example.com">이메일 복사</button>
+          <!-- TODO: 실제 프로필 주소로 바꿔 주세요 -->
+          <a class="pill pill--outline-light" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="pill pill--outline-light" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+          <a class="pill pill--outline-light" href="assets/resume.pdf">이력서 PDF</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer on-dark">
+    <div class="wrap site-footer__inner">
+      <p>© 2026 Gildong Hong — Built with Claude &amp; Figma</p>
+      <a href="#main">맨 위로 ↑</a>
+    </div>
+  </footer>
+
+  <div class="cursor" aria-hidden="true">VIEW</div>
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>
