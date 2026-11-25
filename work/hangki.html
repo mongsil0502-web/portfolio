@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>한끼 · 학식 앱 리디자인 — 홍길동 포트폴리오</title>
+  <meta name="description" content="점심시간마다 식당 앞 게시판을 찾던 학생들이, 앱을 열자마자 오늘 메뉴를 보게 만든 리디자인. 메뉴를 찾는 시간 38초 → 9초 (사용성 테스트 5명).">
+  <meta name="theme-color" content="#F2F0EB">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Noto+Sans+KR:wght@400;500;700&family=Space+Mono:wght@400;700&family=Unbounded:wght@700;900&display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+
+  <!-- Header — READ mode -->
+  <header class="site-header site-header--light">
+    <div class="wrap site-header__inner">
+      <div class="site-header__left">
+        <a class="logo--kr" href="../index.html" aria-label="홍길동 홈" style="text-decoration:none">홍길동</a>
+        <a class="back-link" href="../index.html#work">← 작업 목록</a>
+      </div>
+      <button class="menu-btn" type="button" data-menu-btn aria-controls="site-nav" aria-expanded="false" aria-label="메뉴 열기">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="주요 메뉴">
+        <ul>
+          <li><a class="nav-link" href="../index.html#work">Work</a></li>
+          <li><a class="nav-link" href="../index.html#about">About</a></li>
+          <li><a class="nav-link" href="../index.html#how">How I built this</a></li>
+          <li><a class="pill pill--blue" href="../index.html#contact">연락하기</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Title -->
+    <section class="wrap case-hero">
+      <p class="mono-label c-blue">Case study 01 / 05</p>
+      <h1 class="case-title">한끼 · 학식 앱 리디자인</h1>
+      <p class="case-lead">점심시간마다 식당 앞 게시판을 찾던 학생들이, 앱을 열자마자 오늘 메뉴를 보게 만든 리디자인</p>
+      <dl class="meta">
+        <div><dt>역할</dt><dd>리서치 · UX 설계 · UI 디자인</dd></div>
+        <div><dt>기간</dt><dd>2026.03 – 2026.06 · 14주</dd></div>
+        <div><dt>팀</dt><dd>개인 프로젝트</dd></div>
+        <div><dt>사용 툴</dt><dd>Figma · FigJam · Claude</dd></div>
+      </dl>
+    </section>
+
+    <div class="wrap">
+      <!-- TODO: 대표 목업 이미지로 교체 -->
+      <div class="ph ph--blue ph--hero" role="img" aria-label="대표 이미지: 한끼 앱 주요 화면 목업">[대표 이미지 · 주요 화면 목업]</div>
+
+      <!-- TL;DR — 30초 요약 -->
+      <section class="tldr" aria-labelledby="tldr-title">
+        <div>
+          <p class="label-kr c-lime">TL;DR · 30초 요약</p>
+          <h2 class="tldr__title" id="tldr-title">바쁘다면<br>이것만 보세요</h2>
+          <a class="tldr__more" href="#problem">자세한 과정 ↓</a>
+        </div>
+        <dl class="tldr__item"><dt>문제</dt><dd>학식 메뉴를 보려면 앱에서 여러 화면을 거쳐야 해, 학생들이 앱 대신 식당 앞 게시판을 확인했어요.</dd></dl>
+        <dl class="tldr__item"><dt>나의 역할</dt><dd>인터뷰와 사용성 테스트 설계부터 정보 구조, UI까지 혼자 진행했어요.</dd></dl>
+        <dl class="tldr__item"><dt>결과</dt><dd>홈에서 바로 오늘 메뉴를 확인하는 구조로 바꿔, 메뉴를 찾는 시간이 38초에서 9초로 줄었어요 (테스트 참여자 5명).</dd></dl>
+      </section>
+    </div>
+
+    <!-- Mobile sticky TOC -->
+    <div class="toc-bar">
+      <details>
+        <summary>
+          <span class="toc-bar__current"><span class="n" data-toc-num>01</span><span data-toc-name>문제 정의</span></span>
+          <span class="toc-bar__toggle">목차 ▾</span>
+        </summary>
+        <ol data-toc>
+          <li><a href="#problem">01 문제 정의</a></li>
+          <li><a href="#research">02 리서치</a></li>
+          <li><a href="#insight">03 인사이트</a></li>
+          <li><a href="#design">04 설계</a></li>
+          <li><a href="#final">05 최종 디자인</a></li>
+          <li><a href="#result">06 결과 · 회고</a></li>
+        </ol>
+      </details>
+      <div class="progress" aria-hidden="true"><span data-progress></span></div>
+    </div>
+
+    <div class="wrap case-body">
+      <!-- Desktop TOC -->
+      <nav class="toc" aria-label="케이스 스터디 목차">
+        <p class="mono-label" style="font-size:12px;color:var(--label)">Contents</p>
+        <ol data-toc>
+          <li><a href="#problem"><span class="n">01</span>문제 정의</a></li>
+          <li><a href="#research"><span class="n">02</span>리서치</a></li>
+          <li><a href="#insight"><span class="n">03</span>인사이트</a></li>
+          <li><a href="#design"><span class="n">04</span>설계</a></li>
+          <li><a href="#final"><span class="n">05</span>최종 디자인</a></li>
+          <li><a href="#result"><span class="n">06</span>결과 · 회고</a></li>
+        </ol>
+        <div class="progress" aria-hidden="true"><span data-progress></span></div>
+      </nav>
+
+      <div data-case-content>
+        <!-- 01 -->
+        <section class="cs-section" id="problem" data-title="문제 정의" aria-labelledby="h-problem">
+          <p class="cs-num">01</p>
+          <h2 id="h-problem">문제 정의</h2>
+          <p class="prose">학생들은 점심 메뉴를 확인하려고 학식 앱을 열지만, 로그인 → 식당 선택 → 날짜 선택을 거쳐야 오늘 메뉴가 나왔어요. 그래서 대부분 앱을 포기하고 식당 앞 게시판까지 가서 메뉴를 확인했어요.</p>
+          <blockquote class="quote">
+            <p>“메뉴 하나 보려고 세 번 눌러야 하니까, 그냥 식당 앞에 가서 봐요.”</p>
+            <footer>— 인터뷰 참여자 P3 (2학년)</footer>
+          </blockquote>
+          <p class="prose">점심시간은 50분뿐이라 메뉴 확인이 늦어지면 줄이 길어져요. 식당 입장에서도 앱으로 품절이나 메뉴 변경을 알려도 학생들이 보지 않아 안내가 전달되지 않았어요.</p>
+          <div class="card problem">
+            <p class="problem__label">문제 정의 문장</p>
+            <p class="problem__text">점심을 고르는 학생이 수업 사이 짧은 시간에 메뉴를 확인할 때, 여러 단계를 거쳐야 해서 앱을 포기한다. 어떻게 하면 앱을 열자마자 오늘 먹을 메뉴를 고를 수 있게 만들 수 있을까?</p>
+          </div>
+        </section>
+
+        <!-- 02 -->
+        <section class="cs-section" id="research" data-title="리서치" aria-labelledby="h-research">
+          <p class="cs-num">02</p>
+          <h2 id="h-research">리서치</h2>
+          <p class="prose">학생들이 실제로 언제, 어떤 정보를 보고 메뉴를 고르는지 알기 위해 인터뷰로 행동을 듣고, 설문으로 규모를 확인하고, 다른 학교 앱과 배달 앱의 메뉴 화면을 비교했어요.</p>
+          <ul class="grid-3">
+            <li class="card method"><p class="method__name">사용자 인터뷰</p><p class="method__value">8명 · 2주</p></li>
+            <li class="card method"><p class="method__name">설문</p><p class="method__value">126명 응답</p></li>
+            <li class="card method"><p class="method__name">경쟁 서비스 분석</p><p class="method__value">6개 서비스</p></li>
+          </ul>
+          <!-- TODO: 리서치 사진으로 교체 -->
+          <div class="ph ph--wide" role="img" aria-label="리서치 과정 사진과 어피니티 다이어그램">[리서치 과정 사진 · 어피니티 다이어그램]</div>
+          <h3>주요 발견</h3>
+          <ul class="dash-list">
+            <li>메뉴는 주로 수업 사이 10분 쉬는 시간에 확인해요 — 설문 응답자의 71%가 이 시간대를 꼽았어요.</li>
+            <li>로그인 화면에서 가장 많이 떠나요 — 인터뷰 8명 중 6명이 '로그인이 풀려 있어서' 앱을 닫은 경험이 있었어요.</li>
+            <li>메뉴 이름보다 가격과 품절 여부를 먼저 봐요 — 인터뷰에서 가장 많이 나온 질문은 '아직 있어요?'였어요.</li>
+          </ul>
+        </section>
+
+        <!-- 03 -->
+        <section class="cs-section" id="insight" data-title="인사이트" aria-labelledby="h-insight">
+          <p class="cs-num">03</p>
+          <h2 id="h-insight">인사이트</h2>
+          <p class="prose">발견한 내용을 '언제 · 무엇을 · 어떻게' 기준으로 묶어 세 가지 디자인 기회로 정리했어요.</p>
+          <ul class="grid-3">
+            <li class="card insight"><p class="insight__no" aria-hidden="true">01</p><h3 class="insight__title">열자마자 오늘 메뉴</h3><p class="insight__text">로그인과 식당 선택 없이, 앱 첫 화면이 곧 오늘의 메뉴가 되어야 해요.</p></li>
+            <li class="card insight"><p class="insight__no" aria-hidden="true">02</p><h3 class="insight__title">10분 안에 결정</h3><p class="insight__text">쉬는 시간 안에 고를 수 있도록 가격, 위치, 대기 정도를 한눈에 비교하게 해요.</p></li>
+            <li class="card insight"><p class="insight__no" aria-hidden="true">03</p><h3 class="insight__title">'아직 있어요?'에 답하기</h3><p class="insight__text">품절과 메뉴 변경을 바로 알려 헛걸음을 줄여요.</p></li>
+          </ul>
+        </section>
+
+        <!-- 04 -->
+        <section class="cs-section" id="design" data-title="설계" aria-labelledby="h-design">
+          <p class="cs-num">04</p>
+          <h2 id="h-design">설계</h2>
+          <p class="prose">메뉴 확인까지 5단계였던 흐름을 홈 한 화면으로 줄이는 정보 구조를 만들고, 홈 화면 구성을 두 가지 안으로 나눠 테스트했어요.</p>
+          <!-- TODO: 정보 구조도 이미지로 교체 -->
+          <div class="ph ph--wide" role="img" aria-label="정보 구조도와 사용자 흐름" style="margin-top:24px">[정보 구조도 · 사용자 흐름]</div>
+
+          <div class="decision on-dark" data-ab>
+            <div class="decision__head">
+              <div>
+                <p class="mono-label c-lime" style="font-size:12px">Decision</p>
+                <p class="decision__title">직접 눌러서 두 안을 비교해 보세요</p>
+              </div>
+              <div class="seg" role="group" aria-label="시안 선택">
+                <button type="button" data-ab-btn="A" aria-pressed="false">A안</button>
+                <button type="button" data-ab-btn="B" aria-pressed="true">B안 ✓</button>
+              </div>
+            </div>
+            <div class="options">
+              <figure class="option" data-ab-option="A" style="margin:0">
+                <div class="ph" role="img" aria-label="A안 화면 시안">[A안 화면 시안]</div>
+                <figcaption>A안 — 식당별 탭으로 나눠 보기</figcaption>
+              </figure>
+              <figure class="option is-selected" data-ab-option="B" style="margin:0">
+                <div class="ph ph--blue" role="img" aria-label="B안 화면 시안">[B안 화면 시안]</div>
+                <figcaption>B안 — 오늘 메뉴를 카드로 한 번에 보기</figcaption>
+              </figure>
+            </div>
+            <p class="decision__reason" data-ab-reason aria-live="polite"
+               data-reason-a="A안을 보고 있어요 — 식당을 먼저 고르게 해서, 테스트에서 메뉴를 찾는 데 더 오래 걸렸어요. 최종 선택은 B안이에요."
+               data-reason-b="선택: B안 — 이유: 테스트 참여자 5명 모두 B안에서 더 빨리 메뉴를 골랐고, 식당보다 메뉴를 먼저 본다는 리서치 결과와도 맞았어요.">선택: B안 — 이유: 테스트 참여자 5명 모두 B안에서 더 빨리 메뉴를 골랐고, 식당보다 메뉴를 먼저 본다는 리서치 결과와도 맞았어요.</p>
+          </div>
+        </section>
+
+        <!-- 05 -->
+        <section class="cs-section" id="final" data-title="최종 디자인" aria-labelledby="h-final">
+          <p class="cs-num">05</p>
+          <h2 id="h-final">최종 디자인</h2>
+          <p class="prose">홈 하나에 오늘의 메뉴, 품절 알림, 식당별 대기 정도를 모았어요. 자주 먹는 메뉴는 즐겨찾기로 저장해 나오는 날 알림을 받을 수 있어요.</p>
+          <div class="screens" tabindex="0" aria-label="주요 화면 3개, 옆으로 넘겨 보기">
+            <figure class="screen" style="margin:0"><div class="ph ph--blue" role="img" aria-label="홈 화면">[홈 · 오늘의 메뉴]</div><figcaption>홈 — 앱을 열면 바로 오늘의 메뉴 카드</figcaption></figure>
+            <figure class="screen" style="margin:0"><div class="ph" role="img" aria-label="메뉴 상세 화면">[메뉴 상세 · 품절 알림]</div><figcaption>메뉴 상세 — 가격, 위치, 남은 수량 표시</figcaption></figure>
+            <figure class="screen" style="margin:0"><div class="ph" role="img" aria-label="즐겨찾기 화면">[즐겨찾기 · 알림]</div><figcaption>즐겨찾기 — 좋아하는 메뉴가 나오는 날 알림</figcaption></figure>
+          </div>
+          <p class="swipe-hint">← 옆으로 넘겨 보세요 →</p>
+
+          <div class="ba" data-ba>
+            <div class="ba__after"><span class="ba__tag">AFTER</span>개선 · 홈 한 화면에서 오늘 메뉴 확인</div>
+            <div class="ba__before"><span class="ba__tag">BEFORE</span>기존 · 로그인 → 식당 → 날짜 → 메뉴</div>
+            <div class="ba__handle" aria-hidden="true"></div>
+            <label class="sr-only" for="ba-range">개선 전후 비교 슬라이더</label>
+            <input id="ba-range" type="range" min="0" max="100" value="44">
+          </div>
+          <p class="ba-caption">드래그해서 개선 전후를 비교해 보세요 — 5단계였던 메뉴 확인이 홈 한 화면으로 바뀌었어요.</p>
+        </section>
+
+        <!-- 06 -->
+        <section class="cs-section" id="result" data-title="결과 · 회고" aria-labelledby="h-result">
+          <p class="cs-num">06</p>
+          <h2 id="h-result">결과 · 회고</h2>
+          <p class="prose">학생 5명과 개선 전후 프로토타입으로 사용성 테스트를 진행했어요. 실제 서비스로 출시하지는 않았고, 아래 수치는 테스트 결과예요.</p>
+          <ul class="grid-3">
+            <li class="card result"><p class="result__value">5 → 1</p><p class="result__label">메뉴 확인까지 거치는 화면 수</p></li>
+            <li class="card result"><p class="result__value">38초 → 9초</p><p class="result__label">오늘 메뉴를 찾는 데 걸린 평균 시간</p></li>
+            <li class="card result"><p class="result__value">5 / 5</p><p class="result__label">안내 없이 메뉴 확인에 성공한 참여자</p></li>
+          </ul>
+          <div class="reflection">
+            <div>
+              <h3>배운 점</h3>
+              <ul class="dash-list">
+                <li>사용자가 말한 불편보다, 실제로 앱을 닫는 순간을 관찰했을 때 진짜 문제가 보였어요.</li>
+                <li>제 직관과 테스트 결과가 다를 때, 결과를 따르는 기준이 생겼어요.</li>
+              </ul>
+            </div>
+            <div>
+              <h3>다음에 바꿀 점</h3>
+              <ul class="dash-list">
+                <li>참여자가 5명이라 학년이나 시간대별 차이는 확인하지 못했어요. 다음에는 표본을 늘리고 싶어요.</li>
+                <li>식당 운영자 인터뷰를 하지 못해, 품절 정보를 실시간으로 받는 방법은 가정으로 남았어요.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Next project — back to EXPLORE -->
+    <section class="next on-dark" aria-labelledby="next-title">
+      <div class="wrap">
+        <div class="next__row">
+          <div>
+            <p class="mono-label c-lime">Next project — 02 / 05</p>
+            <!-- TODO: 같이타 케이스 스터디를 만들면 work/gachita.html로 연결 -->
+            <a class="next__title" id="next-title" href="../index.html#work">같이타 · 통학 카풀 앱 →</a>
+            <p class="next__summary">같은 방향 통학생 찾기 어려움 → 4인 팀 UX 리드 → 매칭부터 정산까지 프로토타입 완성</p>
+          </div>
+          <div class="next__thumb" aria-hidden="true"></div>
+        </div>
+        <a class="next__all" href="../index.html#work">← 전체 작업 보기</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer on-dark">
+    <div class="wrap site-footer__inner">
+      <p>© 2026 Gildong Hong — Built with Claude &amp; Figma</p>
+      <a href="#main">맨 위로 ↑</a>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
